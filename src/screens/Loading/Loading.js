@@ -1,13 +1,11 @@
 import { StatusBar } from "expo-status-bar";
-import { Button, StyleSheet, View } from "react-native";
-import { useAuthContext } from "../../contexts/AuthContext/useAuthContext";
+import { StyleSheet, Text, View } from "react-native";
 
-const Dashboard = () => {
-  const [state, actions] = useAuthContext();
+const Loading = () => {
   return (
     <View style={styles.container}>
+      <Text>Loading Page</Text>
       <StatusBar style="auto" />
-      <Button title="Sair" onPress={actions.signOut} />
     </View>
   );
 };
@@ -21,4 +19,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Dashboard;
+export default Loading;
